@@ -17,4 +17,9 @@ def read_items():
 def read_items():
     return {"items": "2"}
 
+@router.get("/items/3")
+def read_items():
+    return {"items": "3"}
+
+
 app.include_router(router)
