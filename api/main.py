@@ -5,6 +5,7 @@ router = APIRouter()
 products_router = APIRouter()
 users_router = APIRouter()
 comments_router = APIRouter()
+commons_router = APIRouter()
 
 
 @app.get("/")
@@ -80,7 +81,21 @@ def read_comment():
     return {"comment": "comment 4"}
 
 
+@commons_router.get("/commons/1")
+def read_common():
+    return {"common": "common 1"}
+
+@commons_router.get("/commons/2")
+def read_common():
+    return {"common": "common 2"}
+
+@commons_router.get("/commons/3")
+def read_common():
+    return {"common": "common 3"}
+
+
 app.include_router(router)
 app.include_router(products_router)
 app.include_router(users_router)
 app.include_router(comments_router)
+app.include_router(commons_router)
