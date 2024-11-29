@@ -4,6 +4,7 @@ app = FastAPI()
 router = APIRouter()
 products_router = APIRouter()
 users_router = APIRouter()
+comments_router = APIRouter()
 
 
 @app.get("/")
@@ -62,6 +63,24 @@ def read_user():
     return {"user": "user 4"}
 
 
+@comments_router.get("/comments/1")
+def read_comment():
+    return {"comment": "comment 1"}
+
+@comments_router.get("/comments/2")
+def read_comment():
+    return {"comment": "comment 2"}
+
+@comments_router.get("/comments/3")
+def read_comment():
+    return {"comment": "comment 3"}
+
+@comments_router.get("/comments/4")
+def read_comment():
+    return {"comment": "comment 4"}
+
+
 app.include_router(router)
 app.include_router(products_router)
 app.include_router(users_router)
+app.include_router(comments_router)
