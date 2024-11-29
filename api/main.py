@@ -4,6 +4,11 @@ from products import products_router
 from users import users_router
 
 app = FastAPI()
+router = APIRouter()
+products_router = APIRouter()
+users_router = APIRouter()
+comments_router = APIRouter()
+commons_router = APIRouter()
 
 
 @app.get("/")
