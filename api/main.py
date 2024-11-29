@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from items import items_router
 
 app = FastAPI()
 
@@ -6,3 +7,5 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+app.include_router(items_router)
