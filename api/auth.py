@@ -1,0 +1,1 @@
+AUTH = "Just a random string"
